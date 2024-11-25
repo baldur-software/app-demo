@@ -1,16 +1,12 @@
 name: Angular Testing
 
 on:
-  push:
-    branches: [ '**' ]
-  pull_request:
-    branches: [ '**' ]
   workflow_run:
-    workflows: [CodeQL Advanced]
+    workflows: [SonarCloud Analysis]
     types: [completed]
 
 jobs:
-  angular-testing:
+  build-angular-docker:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -31,7 +27,7 @@ jobs:
 
     - name: Testing Code
       run: npm run test
-
+      
     - name: Upload Test Results
       uses: actions/upload-artifact@v4
       with:

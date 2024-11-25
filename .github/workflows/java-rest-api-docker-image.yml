@@ -1,9 +1,7 @@
 name: Java Rest API Docker Image CI
 on:
-  push:
-    branches: [ "**" ]
   workflow_run:
-    workflows: [CodeQL Advanced]
+    workflows: [Java Testing]
     types: [completed]
 jobs:
   build:
