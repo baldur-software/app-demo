@@ -7,7 +7,7 @@ on:
     branches: [ '**' ]
 
 jobs:
-  build-angular-docker:
+  angular-testing:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -28,7 +28,7 @@ jobs:
 
     - name: Testing Code
       run: npm run test
-      
+
     - name: Upload Test Results
       uses: actions/upload-artifact@v4
       with:

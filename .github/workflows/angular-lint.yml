@@ -6,9 +6,12 @@ on:
     branches: [ "**" ]
   pull_request:
     branches: [ "**" ]
+  workflow_run:
+    workflows: [Angular Testing]
+    types: [completed]
 
 jobs:
-    build:
+    angular-lint:
       name: Lint Angular
       runs-on: ubuntu-latest
       defaults:
