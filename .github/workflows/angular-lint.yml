@@ -1,5 +1,5 @@
 ---
-name: Lint Angular
+name: Angular Linting
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
 
 jobs:
     angular-lint:
-      name: Lint Angular
+      name: Angular Lint
       runs-on: ubuntu-latest
       defaults:
         run:
