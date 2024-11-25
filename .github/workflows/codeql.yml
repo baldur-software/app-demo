@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - language: java-gradle
+        - language: java-kotlin
           build-mode: none
         - language: javascript-typescript
           build-mode: none
@@ -46,7 +46,7 @@ jobs:
         echo '  make release'
         exit 1
     
-    - if: matrix.language == 'java-gradle'
+    - if: matrix.language == 'java-kotlin'
       name: Autobuild
       uses: github/codeql-action/autobuild@v3
 
