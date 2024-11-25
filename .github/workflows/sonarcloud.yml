@@ -9,6 +9,8 @@ jobs:
   sonarcloud:
     name: SonarQube Cloud
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./backend
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,10 +33,11 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
       - name: Build and analyze
+        working-directory: ${{ env.working-directory}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./backend/gradlew build sonar --info
+        run: ./gradlew build sonar --info
       - name: SonarQube Cloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
