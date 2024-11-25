@@ -6,10 +6,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./backend
       git_hash: $(git rev-parse --short "$GITHUB_SHA")
+    defaults:
+      run:
+        working-directory: ./frontend
     steps:
     - uses: actions/checkout@v4
     - name: Build the Java Rest API Docker image
       run: docker build . --file docker/Dockerfile --tag backend:${{ env.git_hash }}
-      working-directory: ${{ env.working-directory}}
