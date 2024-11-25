@@ -1,7 +1,5 @@
 name: Angular Docker Image CI
 on:
-  push:
-    branches: [ "**" ]
   workflow_run:
     workflows: [Angular Linting]
     types: [completed]

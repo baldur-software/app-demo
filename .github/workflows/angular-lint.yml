@@ -2,10 +2,6 @@
 name: Angular Linting
 
 on:
-  push:
-    branches: [ "**" ]
-  pull_request:
-    branches: [ "**" ]
   workflow_run:
     workflows: [Angular Testing]
     types: [completed]
