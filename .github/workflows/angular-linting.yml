@@ -1,4 +1,4 @@
-name: Angular Testing
+name: Angular Linting
 
 on:
   workflow_call:
@@ -9,8 +9,8 @@ on:
         type: string
 
 jobs:
-  angular-testing:
-    name: Angular Testing
+  angular-lint:
+    name: Angular Lint
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -29,11 +29,8 @@ jobs:
     - name: Install dependencies
       run: yarn --frozen-lockfile
 
-    - name: Testing Code
-      run: npm run test
+    - name: Linting Code
+      run: npm run lint
       
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v4
-      with:
-        name: coverage
-        path: /coverage
+    - name: Linting Styling
+      run: npm run lint:style

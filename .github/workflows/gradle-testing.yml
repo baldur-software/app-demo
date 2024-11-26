@@ -1,12 +1,14 @@
 name: Java Testing
 
 on:
-  workflow_run:
-    workflows: [SonarCloud Analysis]
-    types: [completed]
+  workflow_call:
+    inputs:
+      java_version:
+        required: true
+        type: number
 
 jobs:
-  build:
+  testing-gradle:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -16,10 +18,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 21
+    - name: Set up JDK ${{ inputs.java_version }}
       uses: actions/setup-java@v4
       with:
-        java-version: '21'
+        java-version: ${{ inputs.java_version }}
         distribution: 'zulu'
 
     - name: Setup Gradle

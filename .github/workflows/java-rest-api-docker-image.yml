@@ -1,8 +1,7 @@
 name: Java Rest API Docker Image CI
 on:
-  workflow_run:
-    workflows: [Java Testing]
-    types: [completed]
+  workflow_dispatch:
+    
 jobs:
   build:
     runs-on: ubuntu-latest

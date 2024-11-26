@@ -1,0 +1,41 @@
+---
+name: Building
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  codeql-security-scan:
+    uses: ./.github/workflows/codeql.yml
+    with:
+      languages: "java-kotlin,javascript-typescript"
+  
+  sonarcloud-security-scan:
+    uses: ./.github/workflows/sonarcloud.yml
+    with:
+      java_version: 21
+
+  testing-java:
+    needs: [codeql-security-scan, sonarcloud-security-scan]
+    if: success()
+    uses: ./.github/workflows/gradle-testing.yml
+    with:
+      java_version: 21
+  
+  testing-angular:
+    needs: [codeql-security-scan, sonarcloud-security-scan]
+    if: success()
+    uses: ./.github/workflows/angular-testing.yml
+    with:
+      node_versions: "22.x"
+
+  linting-angular:
+    needs: [testing-angular]
+    if: success()
+    uses: ./.github/workflows/angular-linting.yml
+    with:
+      node_versions: "22.x"
+  
+  
