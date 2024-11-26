@@ -9,6 +9,11 @@ on:
 jobs:
   codeql-security-scan:
     uses: ./.github/workflows/codeql.yml
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
     with:
       languages: "java-kotlin,javascript-typescript"
   
