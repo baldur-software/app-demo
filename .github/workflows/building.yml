@@ -42,5 +42,17 @@ jobs:
     uses: ./.github/workflows/angular-linting.yml
     with:
       node_versions: "22.x"
-  
-  
+
+  build-angular-docker-image:
+    needs: [linting-angular]
+    if: success()
+    uses: ./.github/workflows/angular-docker-image.yml
+
+  build-java-api-docker-image:
+    needs: [testing-java]
+    if: success()
+    uses: ./.github/workflows/java-rest-api-docker-image.yml
+
+  # deploy-dev:
+  #   needs: [build-angular-docker-image, build-java-api-docker-image]
+  #   uses: ./.github/workflows/deploy-dev.yml
