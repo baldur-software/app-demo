@@ -19,6 +19,7 @@ jobs:
   
   sonarcloud-security-scan:
     uses: ./.github/workflows/sonarcloud.yml
+    permissions: read-all
     with:
       java_version: 21
 
