@@ -2000,22 +2000,17 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-4.0.0.tgz#7dfccb9df5499e627e7bfdbb4021a06813a45dba"
   integrity sha512-189nelqtPd8++phaHNwYovKZI0FOzH1vQEE3QhHHkNIGrg5fSs9CbYP3RvfEH5geztnIA9Jwq91wyOIwAW5JIQ==
 
-"@datadog/browser-core@5.31.1":
-  version "5.31.1"
-  resolved "https://registry.yarnpkg.com/@datadog/browser-core/-/browser-core-5.31.1.tgz#1b8917cbf2ad0b9d5522b19756b44388df1084db"
-  integrity sha512-mMbyyMeRfiaJ3CtXAPN1+gTZk9qCl9UfDO8Cr0dZGXCcBvZUyeSCocKYZcfnJkqF5/zv7n8/eBmkyzdsAcYaLg==
-
 "@datadog/browser-core@5.32.0":
   version "5.32.0"
   resolved "https://registry.yarnpkg.com/@datadog/browser-core/-/browser-core-5.32.0.tgz#2b13051588db0b6f5616f7f28d59df4ff527ebec"
   integrity sha512-+RnQZRda/XwjP2v8TZHIIbZItS1xlRYVs7OmueaA+/MItj0DiL8hZ4uIj7eLsNUXGS0qsiGHXWkaBZE2HfWuvQ==
 
-"@datadog/browser-logs@^5.31.1":
-  version "5.31.1"
-  resolved "https://registry.yarnpkg.com/@datadog/browser-logs/-/browser-logs-5.31.1.tgz#99f307d0e43584495a7f842f26f2a1f93ec40a3f"
-  integrity sha512-4KklzmMhHDyj8AH0XKK5gXOjHAMCjTja0ngJQnwkh4VxysRo20wDPwU7ITRqLJ1YkRyMex6KPAn70sunmcZFjA==
+"@datadog/browser-logs@^5.32.0":
+  version "5.32.0"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-logs/-/browser-logs-5.32.0.tgz#7937de2f7e8939c519e4189b9c97dc064e96aa40"
+  integrity sha512-z6LNKUVOI81+0U1XRXMaqs25LqKwwZWg+1PjXbpM0dScQ+4jahPBNFub07L8YaHcmOoF+CEHwzmMIBWs+vWNng==
   dependencies:
-    "@datadog/browser-core" "5.31.1"
+    "@datadog/browser-core" "5.32.0"
 
 "@datadog/browser-rum-core@5.32.0":
   version "5.32.0"
