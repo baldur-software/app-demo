@@ -41,6 +41,13 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
 
+      - name: Build and analyze
+        working-directory: ./backend
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.sonar_token }}
+        run: gradle build sonar --info
+
       - name: SonarQube Cloud Scan
         env:
           SONAR_TOKEN: ${{ secrets.sonar_token }}

@@ -26,14 +26,14 @@ jobs:
       sonar_token: ${{ secrets.SONAR_TOKEN }}
 
   testing-java:
-    needs: [codeql-security-scan]
+    needs: [codeql-security-scan, sonarcloud-security-scan]
     if: success()
     uses: ./.github/workflows/gradle-testing.yml
     with:
       java_version: 21
   
   testing-angular:
-    needs: [codeql-security-scan]
+    needs: [codeql-security-scan, sonarcloud-security-scan]
     if: success()
     uses: ./.github/workflows/angular-testing.yml
     with:
