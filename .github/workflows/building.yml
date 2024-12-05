@@ -19,8 +19,11 @@ jobs:
   
   sonarcloud-security-scan:
     uses: ./.github/workflows/sonarcloud.yml
+    permissions: read-all
     with:
       java_version: 21
+    secrets:
+      sonar_token: ${{ secrets.SONAR_TOKEN }}
 
   testing-java:
     needs: [codeql-security-scan]

@@ -6,6 +6,9 @@ on:
       java_version:
         required: true
         type: number
+    secrets:
+      sonar_token:
+        required: true
 
 jobs:
   sonarcloud:
@@ -40,5 +43,5 @@ jobs:
 
       - name: SonarQube Cloud Scan
         env:
-          SONAR_TOKEN: ${{ secrets.TOKEN_DATA }}
+          SONAR_TOKEN: ${{ secrets.sonar_token }}
         uses: sonarsource/sonarcloud-github-action@v3.1
