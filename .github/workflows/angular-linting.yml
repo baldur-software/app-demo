@@ -4,7 +4,6 @@ on:
   workflow_call:
     inputs:
       node_versions:
-        description: 'Comma-separated list of node versions'
         required: true
         type: string
 
@@ -12,19 +11,18 @@ jobs:
   angular-lint:
     name: Angular Lint
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ${{fromJson(inputs.node_versions)}}
+    permissions: read-all
     defaults:
       run:
         working-directory: ./frontend
+    
     steps:
     - uses: actions/checkout@v4
 
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: ${{ inputs.node_versions }}
 
     - name: Install dependencies
       run: yarn --frozen-lockfile
