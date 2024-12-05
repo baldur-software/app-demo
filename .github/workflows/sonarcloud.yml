@@ -39,6 +39,6 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
 
       - name: SonarQube Cloud Scan
-        uses: sonarsource/sonarcloud-github-action@v3.1
         env:
           SONAR_TOKEN: ${{ secrets.TOKEN_DATA }}
+        uses: sonarsource/sonarcloud-github-action@v3.1
