@@ -4,7 +4,6 @@ on:
   workflow_call:
     inputs:
       node_versions:
-        description: 'Comma-separated list of node versions'
         required: true
         type: string
 
@@ -12,9 +11,6 @@ jobs:
   angular-testing:
     name: Angular Testing
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ${{fromJson(inputs.node_versions)}}
     defaults:
       run:
         working-directory: ./frontend
@@ -24,7 +20,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: ${{ inputs.node_versions }}
 
     - name: Install dependencies
       run: yarn --frozen-lockfile
