@@ -39,7 +39,6 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
 
       - name: SonarQube Cloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: sonarsource/sonarcloud-github-action@v3.1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.TOKEN_DATA }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
