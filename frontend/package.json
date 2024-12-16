@@ -37,7 +37,7 @@
     "@angular/cli": "^19.0.5",
     "@angular/compiler-cli": "^18.2.0",
     "@datadog/datadog-ci": "^2.45.1",
-    "@eslint/js": "^9.15.0",
+    "@eslint/js": "^9.17.0",
     "@jest/globals": "^29.7.0",
     "@playwright/test": "^1.49.1",
     "@types/jest": "^29.5.14",
