@@ -2005,6 +2005,11 @@
   resolved "https://registry.yarnpkg.com/@datadog/browser-core/-/browser-core-5.33.0.tgz#0afa51758645d9453b0aa89f71e675a6dc11660e"
   integrity sha512-JsYGgp4FMN2gzjaeayd4VQK9kx7bsPYOXbzFTe1XtbKiIjhYnG3nmG0/HHl7kIPQgqZ5Z2DFxj3r39YK2F2V6Q==
 
+"@datadog/browser-core@5.34.0":
+  version "5.34.0"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-core/-/browser-core-5.34.0.tgz#494d9af43f4920ce639690d62ef9520baa3aa039"
+  integrity sha512-h2ZnRXxXRqHzV9uTwonug1QxYaDc6kY5E21yWPvhF1m1VqubOUhMeXw3pVn1pt2Izhs26ApYfepcATG6bmol4Q==
+
 "@datadog/browser-logs@^5.33.0":
   version "5.33.0"
   resolved "https://registry.yarnpkg.com/@datadog/browser-logs/-/browser-logs-5.33.0.tgz#c80b6c8261038adf3c48b49a7b6a74687cd80b17"
@@ -2012,20 +2017,20 @@
   dependencies:
     "@datadog/browser-core" "5.33.0"
 
-"@datadog/browser-rum-core@5.33.0":
-  version "5.33.0"
-  resolved "https://registry.yarnpkg.com/@datadog/browser-rum-core/-/browser-rum-core-5.33.0.tgz#7a9188fdcf484e1c2b8c9d15adae4063e4e55c48"
-  integrity sha512-s0G8xYQtJ7lbDiHKa3dTzq2RDBxr6EWReu7cZuKR7Pa5YiH7nhQORry8VGviKWNR0/KSs5LWQfNC0LsFH/DFng==
+"@datadog/browser-rum-core@5.34.0":
+  version "5.34.0"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-rum-core/-/browser-rum-core-5.34.0.tgz#7a06d76e150f83b8e17b22d2c40cd859ef34daec"
+  integrity sha512-XpxIHssem/er/BkLU94RIFFrdDCWQ864IdlwcsyHX02sN/jwm0PRzQfZAs0dZofsRFihfsLPyOOlH9tJ+UB7zw==
   dependencies:
-    "@datadog/browser-core" "5.33.0"
+    "@datadog/browser-core" "5.34.0"
 
-"@datadog/browser-rum@^5.33.0":
-  version "5.33.0"
-  resolved "https://registry.yarnpkg.com/@datadog/browser-rum/-/browser-rum-5.33.0.tgz#18554d3d530c4d5730b571219ab178112fd82d47"
-  integrity sha512-mbqw7wUti0GK+N8zZqFnGJ28XP0Lt2FAdoK31DJClUfgOAxZ0z8RVaPL+2nEABEpYEXkS6+V25UxRAXPjfyzsA==
+"@datadog/browser-rum@^5.34.0":
+  version "5.34.0"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-rum/-/browser-rum-5.34.0.tgz#4082f667fba96ce64b56d4912d3839b41a05230d"
+  integrity sha512-6P3R8oji5/ie9V04+/oqrwdWLCK/OCQ5uvii8OGSad3TIEggp99CcRyAFCEy3PUCnAcwO2lpCS8zZUy6zXkFtw==
   dependencies:
-    "@datadog/browser-core" "5.33.0"
-    "@datadog/browser-rum-core" "5.33.0"
+    "@datadog/browser-core" "5.34.0"
+    "@datadog/browser-rum-core" "5.34.0"
 
 "@datadog/datadog-ci@^2.46.0":
   version "2.46.0"
