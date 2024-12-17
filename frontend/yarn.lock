@@ -2027,10 +2027,10 @@
     "@datadog/browser-core" "5.33.0"
     "@datadog/browser-rum-core" "5.33.0"
 
-"@datadog/datadog-ci@^2.45.1":
-  version "2.45.1"
-  resolved "https://registry.yarnpkg.com/@datadog/datadog-ci/-/datadog-ci-2.45.1.tgz#f49f699499ff776472811f0c5eaeb467c4589d44"
-  integrity sha512-na4c4UuhT2jGFTOh+/uUVGR0CVj7c2B6Q7pRp9AMxb6NF2o3McjnSFJzmVc7YFdZwr+eHXeKXKf6bEYw/PjNWw==
+"@datadog/datadog-ci@^2.46.0":
+  version "2.46.0"
+  resolved "https://registry.yarnpkg.com/@datadog/datadog-ci/-/datadog-ci-2.46.0.tgz#77917e489fd19445d6170f3edbd83bca0c8faf16"
+  integrity sha512-rz0CKLCjJVsid21iZNwh/fkLxu+bdo1odpcjG4TkZAKrOEkawr4gjApE/+XlsI3eWFeKz7XcimUKh7AQCuyUXg==
   dependencies:
     "@aws-sdk/client-cloudwatch-logs" "^3.624.0"
     "@aws-sdk/client-iam" "^3.624.0"
@@ -2064,6 +2064,7 @@
     js-yaml "3.13.1"
     jszip "^3.10.1"
     ora "5.4.1"
+    packageurl-js "^2.0.1"
     proxy-agent "^6.4.0"
     rimraf "^3.0.2"
     semver "^7.5.3"
@@ -9210,6 +9211,11 @@ package-json-from-dist@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz#4f1471a010827a86f94cfd9b0727e36d267de505"
   integrity sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==
+
+packageurl-js@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/packageurl-js/-/packageurl-js-2.0.1.tgz#a8fa43a64971b5dd0dca5fb904b950a6cc317a6f"
+  integrity sha512-N5ixXjzTy4QDQH0Q9YFjqIWd6zH6936Djpl2m9QNFmDv5Fum8q8BjkpAcHNMzOFE0IwQrFhJWex3AN6kS0OSwg==
 
 pacote@20.0.0:
   version "20.0.0"
