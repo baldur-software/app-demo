@@ -24,7 +24,7 @@
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
     "@datadog/browser-logs": "^5.34.0",
-    "@datadog/browser-rum": "^5.34.0",
+    "@datadog/browser-rum": "^5.34.1",
     "ag-grid-angular": "^33.0.2",
     "ag-grid-community": "^33.0.1",
     "ag-grid-enterprise": "^33.0.2",
