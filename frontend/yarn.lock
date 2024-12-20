@@ -4754,6 +4754,11 @@ ag-charts-types@11.0.0:
   resolved "https://registry.yarnpkg.com/ag-charts-types/-/ag-charts-types-11.0.0.tgz#aab86fab7e49a2e5204f4d5fb925110d0ca4502f"
   integrity sha512-8KUCZtKaUNjxqvo5E71sP7nBpRHMSv81anK93UCMMWYZC3iBSEF1pxfYS2/GEM9oo5VP65mevDJsq10dp0vooQ==
 
+ag-charts-types@11.0.3:
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/ag-charts-types/-/ag-charts-types-11.0.3.tgz#a4aa4825b298014c1323a1e5832dec0ef4e5e135"
+  integrity sha512-q7O2viQXPyO014QVH7KjFCUmQ/NvMBx9ReZtramQ44u+/aAa0ttLi/coK+V0Hse4/MG1eB/2XhgymdooQ0Kalg==
+
 ag-grid-angular@^33.0.2:
   version "33.0.2"
   resolved "https://registry.yarnpkg.com/ag-grid-angular/-/ag-grid-angular-33.0.2.tgz#4f07fd9aa4a9989fa24b8702b111911e461fd7a6"
@@ -4762,12 +4767,19 @@ ag-grid-angular@^33.0.2:
     ag-grid-community "33.0.2"
     tslib "^2.3.0"
 
-ag-grid-community@33.0.2, ag-grid-community@^33.0.1:
+ag-grid-community@33.0.2:
   version "33.0.2"
   resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-33.0.2.tgz#c383128782b2e7bb5444e4c989bceec4d6077d16"
   integrity sha512-ymD2ADPVfsAMNoKRB9BvKYPWo+MSJ2L9gOwiwyBS1TykNwf0bL7kfQParZXcY+h+b8JpfeVbx4oGDLZBEe3Gag==
   dependencies:
     ag-charts-types "11.0.0"
+
+ag-grid-community@^33.0.3:
+  version "33.0.3"
+  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-33.0.3.tgz#51511d5b048eedf24b3de596967e74a3272bfe88"
+  integrity sha512-HZeVmVieZ5Gm9j09Itecqm+OIX8X6cU4TJToUbsXv3DxdO9SK5/s8aAJAwBHtNRXOhHrhqQYwrY2yc3OtzWwcQ==
+  dependencies:
+    ag-charts-types "11.0.3"
 
 ag-grid-enterprise@^33.0.2:
   version "33.0.2"
